@@ -2,38 +2,68 @@
 
 *{
     box-sizing: border-box;
-    background-color: #030400;
     margin: 0;
     padding: 0;
 }
-
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f1f1f1;
+    min-height: 200vh;
+}
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-style: 16px;
     color: #ffffff;
     text-decoration: none;
+    display: inline-block;
+
 }
-#header{
-    display: flex;
-    justify-content: space-between;
+header{
     align-items: center;
-    padding: 25px 5%;
+    padding: 20px 5%;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    transition: 0.6s;
 }
+header.sticky{
+    padding: 10px 5%;
+    background: #eda358;
+}
+.banner{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/background.jpg);
+    background-size: cover; 
+    position: relative;
+}
+
 .logo{
+    position: relative;
     cursor: pointer;
     font-size: 30;
     font-weight: 800;
 }
 .nav_links {
-    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;  
+
 }
+
 .nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
+    position: relative;
+    list-style: none;
 }
 .nav_links li a {
     transition: all 0.3s ease 0s;
+    font-weight: 700;
+    position: relative;
 }
 .nav_links li a:hover{
     color: #b1b0b0;
@@ -45,7 +75,17 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    font-weight: 600;
+    font-size: 17;
+    position: relative;
 }
 button:hover{
     background-color: rgba(237, 163, 88, 0.8);
+}
+header.sticky .nav_links li a{
+    color: #f1f1f1;
+}
+header.sticky .nav_links .contact button{
+    color: #030400;
+    background-color: #f1f1f1;
 }
