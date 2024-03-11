@@ -79,12 +79,58 @@
 
         </div>
     </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contacts</h1>
+                    <p><i class="fa-solid fa-envelope"></i>islamzholdshov7@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+996 700 616 512</p>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@1trillion0?is_from_webapp=1&sender_device=pc"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/joldoshov._0/#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://open.spotify.com/user/h1i5dj6z2ww0ywbs9j1dwy7bz?si=ba15286f49d54c80"><i
+                                class="fa-brands fa-spotify"></i></a>
+                        <a href="https://github.com/Isa2222222"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="Email">
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>It has been made by Me.<i class="fas fa-heart"></i>Kimsanbaevich</p>
+            </divs>
+        </div>
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
-    </script>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tap-links");
+            var tabcontents = document.getElementsByClassName("tap-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
 </body>
 
 </html>
