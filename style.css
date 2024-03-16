@@ -137,6 +137,11 @@ header.sticky .nav_links .contact button{
     padding: 10%;
 }
 
+.contacts-grid{ 
+    display: grid; 
+    grid-template-columns: auto auto; 
+} 
+
 form input,
 form textarea {
     width: 100%;
